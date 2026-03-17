@@ -12,7 +12,7 @@ def display_db_contents(db_path):
     user_traffic_records = cursor.fetchall()
     if user_traffic_records:
         print("Common Name     | Year-Month | Bytes Received | Bytes Sent")
-        print("--------------------------------------------------")
+        print("------------------------------------------------------------")
         for row in user_traffic_records:
             common_name, year_month, bytes_received, bytes_sent = row
             human_received = utils.convert_bytes_to_human_readable(bytes_received)
@@ -37,7 +37,7 @@ def display_db_contents(db_path):
     current_client_state_records = cursor.fetchall()
     if current_client_state_records:
         print("Common Name     | Connected Since     | Bytes Received | Bytes Sent")
-        print("------------------------------------------------------------------")
+        print("---------------------------------------------------------------------")
         for row in current_client_state_records:
             common_name, connected_since, bytes_received, bytes_sent = row
             human_received = utils.convert_bytes_to_human_readable(bytes_received)
