@@ -50,7 +50,7 @@ User003      | 2026-03-16 12:50:05 | 5.80 MB        | 27.95 MB
     status /var/log/openvpn/status.log
     status-version 2
     ```
-    If there are no such lines, then add. If you plan to use a different path, do not forget to specify it in the file `config.py `.
+    If there are no such lines, then add. If you plan to use a different path, do not forget to specify it in the file `config.py`.
 
 4.  **Run the Main Application (Scheduled):**
     To process logs and update the database automatically, set up a cron job. Make the script `OpenVPN_Traffic_Monitor` executable (replace `/path/to/your/project/` with your actual project path):
