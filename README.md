@@ -3,10 +3,10 @@
 ### Project Description:
 
 **English:**
-This project is designed to monitor and analyze OpenVPN client traffic. It automatically parses OpenVPN status logs, extracts client connection details, including bytes received and sent, and then stores this data in a structured SQLite database. The system tracks individual client traffic, differentiates between new and continuing sessions, and records historical monthly usage, providing valuable insights into VPN client activity and data consumption.
+This application is designed to monitor and analyze the traffic of OpenVPN clients. It automatically parses OpenVPN logs, extracts information about client connections, including received and sent traffic, and then stores this data in an SQLite database. The system tracks the traffic of individual clients, and also keeps records of traffic usage by month.
 
 **Russian:**
-Этот проект предназначен для мониторинга и анализа трафика клиентов OpenVPN. Он автоматически разбирает логи статуса OpenVPN, извлекает детали подключений клиентов, включая полученные и отправленные байты, а затем сохраняет эти данные в структурированной базе данных SQLite. Система отслеживает трафик отдельных клиентов, различает новые и продолжающиеся сессии, а также записывает исторические данные ежемесячного использования, предоставляя ценную информацию об активности клиентов VPN и потреблении данных.
+Это приложение предназначено для мониторинга и анализа трафика клиентов OpenVPN. Оно автоматически разбирает логи OpenVPN, извлекает информацию о подключениях клиентов, включая полученный и отправленный трафик, а затем сохраняет эти данные в базе данных SQLite. Система отслеживает трафик отдельных клиентов, а также ведет учет использования трафика по месяцам.
 
 ### Example Output from `display.py`
 
