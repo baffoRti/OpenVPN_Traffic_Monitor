@@ -63,7 +63,7 @@ User003      | 2026-03-16 12:50:05 | 5.80 MB        | 27.95 MB
     ```
     Add the following line:
     ```cron
-    * * * * * /path/to/your/project/OpenVPN_Traffic_Monitor.sh
+    */n * * * * /path/to/your/project/OpenVPN_Traffic_Monitor.sh
     ```
     where n is the start frequency in minutes (recommended value from 1 to 5)
 
