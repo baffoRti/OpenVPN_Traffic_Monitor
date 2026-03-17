@@ -101,11 +101,11 @@ User003      | 2026-03-16 12:50:05 | 5.80 MB        | 27.95 MB
 **English:**
 To view the current statistics stored in the database, run the `display.py` script:
 ```bash
-python display.py
+python3 display.py
 ```
 
 **Russian:**
 Для просмотра текущей статистики, хранящейся в базе данных, запустите скрипт `display.py`:
 ```bash
-python display.py
+python3 display.py
 ```
