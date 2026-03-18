@@ -7,7 +7,7 @@ def display_db_contents(db_path):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
-    print("\n--- Contents of user_traffic_monthly table ---")
+    print("\n--- User traffic monthly ---")
     cursor.execute("SELECT * FROM user_traffic_monthly")
     user_traffic_records = cursor.fetchall()
     if user_traffic_records:
@@ -26,7 +26,6 @@ def display_db_contents(db_path):
         print("No records found in user_traffic_monthly.")
 
 
-    print("\n--- Contents of log_metadata table ---")
     cursor.execute("SELECT * FROM log_metadata")
     log_metadata_records = cursor.fetchall()
     if log_metadata_records:
@@ -38,7 +37,7 @@ def display_db_contents(db_path):
         print("No records found in log_metadata.")
 
 
-    print("\n--- Contents of current_client_state table ---")
+    print("\n--- Current client state ---")
     cursor.execute("SELECT * FROM current_client_state")
     current_client_state_records = cursor.fetchall()
     if current_client_state_records:
@@ -74,8 +73,5 @@ def display_db_contents(db_path):
 
 
 if __name__ == '__main__':
-    # This allows direct execution of display.py for debugging or standalone use.
-    # It will connect to the default database defined in config.py.
-    print("\n--- Displaying database contents (standalone) ---")
     display_db_contents(config.OPENVPN_STATS_DB)
-    print("\n--- Display complete ---\n")
+    print("\n")
