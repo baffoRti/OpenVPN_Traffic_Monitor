@@ -13,15 +13,15 @@ def display_db_contents(db_path):
     if user_traffic_records:
         # Sort records alphabetically by common_name
         user_traffic_records.sort(key=lambda x: x[0].lower())
-        print("Common Name | Year-Month | Received Traffic | Sent Traffic | Total Traffic")
-        print("----------------------------------------------------------------------------")
+        print("Common Name     | Year-Month | Received Traffic | Sent Traffic | Total Traffic")
+        print("-------------------------------------------------------------------------------")
         for row in user_traffic_records:
             common_name, year_month, bytes_received, bytes_sent = row
             total_traffic_bytes = bytes_received + bytes_sent
             human_received = utils.convert_bytes_to_human_readable(bytes_received)
             human_sent = utils.convert_bytes_to_human_readable(bytes_sent)
             human_total = utils.convert_bytes_to_human_readable(total_traffic_bytes)
-            print(f"{common_name:<15} | {year_month:<10} | {human_received:<12} | {human_sent:<12} | {human_total:<12}")
+            print(f"{common_name:<15} | {year_month:<10} | {human_received:<16} | {human_sent:<12} | {human_total:<12}")
     else:
         print("No records found in user_traffic_monthly.")
 
@@ -44,15 +44,15 @@ def display_db_contents(db_path):
     if current_client_state_records:
         # Sort records alphabetically by common_name
         current_client_state_records.sort(key=lambda x: x[0].lower())
-        print("Common Name | Connected Since   | Received Traffic | Sent Traffic | Total Traffic")
-        print("-----------------------------------------------------------------------------------")
+        print("Common Name     | Connected Since     | Received Traffic | Sent Traffic | Total Traffic")
+        print("----------------------------------------------------------------------------------------")
         for row in current_client_state_records:
             common_name, connected_since, bytes_received, bytes_sent = row
             total_traffic_bytes = bytes_received + bytes_sent
             human_received = utils.convert_bytes_to_human_readable(bytes_received)
             human_sent = utils.convert_bytes_to_human_readable(bytes_sent)
             human_total = utils.convert_bytes_to_human_readable(total_traffic_bytes)
-            print(f"{common_name:<15} | {connected_since:<19} | {human_received:<12} | {human_sent:<12} | {human_total:<12}")
+            print(f"{common_name:<15} | {connected_since:<19} | {human_received:<16} | {human_sent:<12} | {human_total:<12}")
     else:
         print("No records found in current_client_state.")
 
@@ -78,4 +78,4 @@ if __name__ == '__main__':
     # It will connect to the default database defined in config.py.
     print("\n--- Displaying database contents (standalone) ---")
     display_db_contents(config.OPENVPN_STATS_DB)
-    print("--- Display complete ---\n")
+    print("\n--- Display complete ---\n")
