@@ -30,10 +30,10 @@ def display_db_contents(db_path):
     cursor.execute("SELECT * FROM log_metadata")
     log_metadata_records = cursor.fetchall()
     if log_metadata_records:
-        print("ID | Last Updated Time")
-        print("-----------------------")
+        print("Last Updated Time")
+        print("------------------")
         for row in log_metadata_records:
-            print(f"{row[0]:<2} | {row[1]}")
+            print(f"{row[1]}")
     else:
         print("No records found in log_metadata.")
 
