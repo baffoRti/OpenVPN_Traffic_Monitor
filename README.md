@@ -20,15 +20,15 @@ User001         | 2026-03    | 37.62 MB         | 103.10 MB    | 140.72 MB
 User002         | 2026-03    | 81.89 MB         | 1.75 GB      | 1.83 GB     
 User003         | 2026-03    | 176.09 MB        | 4.24 GB      | 4.42 GB        
 
-Last Updated Time
---------------------
-2026-03-18 15:24:55
-
 --- Current client state ---
 Common Name     | Connected Since     | Received Traffic | Sent Traffic | Total Traffic
 ----------------------------------------------------------------------------------------
 User001         | 2026-03-18 13:59:51 | 15.77 MB         | 43.63 MB     | 59.40 MB    
 User002         | 2026-03-18 09:33:35 | 22.80 MB         | 1.68 GB      | 1.70 GB     
+
+Last Updated Time
+--------------------
+2026-03-18 15:24:55
 
 --- Overall Monthly Traffic Summary ---
 Total Received Across All Users: 295.6 MB
