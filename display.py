@@ -31,7 +31,7 @@ def display_db_contents(db_path):
     log_metadata_records = cursor.fetchall()
     if log_metadata_records:
         print("Last Updated Time")
-        print("------------------")
+        print("--------------------")
         for row in log_metadata_records:
             print(f"{row[1]}")
     else:
