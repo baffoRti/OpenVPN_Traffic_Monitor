@@ -2,6 +2,7 @@ import sqlite3
 import config # For openvpn_stats_db
 import utils  # For convert_bytes_to_human_readable
 
+
 def display_db_contents(db_path):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
@@ -20,7 +21,7 @@ def display_db_contents(db_path):
             human_received = utils.convert_bytes_to_human_readable(bytes_received)
             human_sent = utils.convert_bytes_to_human_readable(bytes_sent)
             human_total = utils.convert_bytes_to_human_readable(total_traffic_bytes)
-            print(f"{common_name:<15} | {year_month:<10} | {human_received:<18} | {human_sent:<12} | {human_total:<13}")
+            print(f"{common_name:<15} | {year_month:<10} | {human_received:<12} | {human_sent:<12} | {human_total:<12}")
     else:
         print("No records found in user_traffic_monthly.")
 
@@ -51,11 +52,26 @@ def display_db_contents(db_path):
             human_received = utils.convert_bytes_to_human_readable(bytes_received)
             human_sent = utils.convert_bytes_to_human_readable(bytes_sent)
             human_total = utils.convert_bytes_to_human_readable(total_traffic_bytes)
-            print(f"{common_name:<15} | {connected_since:<19} | {human_received:<18} | {human_sent:<12} | {human_total:<13}")
+            print(f"{common_name:<15} | {connected_since:<19} | {human_received:<12} | {human_sent:<12} | {human_total:<12}")
     else:
         print("No records found in current_client_state.")
 
+    # Display overall monthly traffic summary
+    print("\n--- Overall Monthly Traffic Summary ---")
+    cursor.execute("SELECT SUM(bytes_received), SUM(bytes_sent) FROM user_traffic_monthly")
+    overall_monthly_summary = cursor.fetchone()
+    if overall_monthly_summary and overall_monthly_summary[0] is not None:
+        overall_received = overall_monthly_summary[0]
+        overall_sent = overall_monthly_summary[1]
+        overall_total = overall_received + overall_sent
+        print(f"Total Received Across All Users: {utils.convert_bytes_to_human_readable(overall_received)}")
+        print(f"Total Sent Across All Users:     {utils.convert_bytes_to_human_readable(overall_sent)}")
+        print(f"Overall Total Traffic:           {utils.convert_bytes_to_human_readable(overall_total)}")
+    else:
+        print("No monthly traffic data to summarize.")
+
     conn.close()
+
 
 if __name__ == '__main__':
     # This allows direct execution of display.py for debugging or standalone use.
