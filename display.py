@@ -26,6 +26,7 @@ def display_db_contents(db_path):
         print("No records found in user_traffic_monthly.")
 
 
+    print()
     cursor.execute("SELECT * FROM log_metadata")
     log_metadata_records = cursor.fetchall()
     if log_metadata_records:
