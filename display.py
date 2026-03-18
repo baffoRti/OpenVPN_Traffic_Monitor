@@ -74,4 +74,3 @@ def display_db_contents(db_path):
 
 if __name__ == '__main__':
     display_db_contents(config.OPENVPN_STATS_DB)
-    print("\n")
