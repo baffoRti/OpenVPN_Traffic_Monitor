@@ -227,12 +227,6 @@ Charts are saved as PNG files in the specified output directory (default: `chart
 - `current_client_state` - Current state of connected clients
 - `log_metadata` - Log processing metadata
 
-### Algorithms
-- OpenVPN log data validation
-- Batch processing (batch size: 10)
-- Frequently used data caching
-- Time-based log rotation (TimedRotatingFileHandler)
-
 ## Troubleshooting
 
 ### Problem: "Log file not found"
@@ -246,18 +240,3 @@ Ensure matplotlib is installed:
 ```bash
 pip list | grep matplotlib
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-- GitHub: [baffoRti/OpenVPN_Traffic_Monitor](https://github.com/baffoRti/OpenVPN_Traffic_Monitor)
-- Issues: [GitHub Issues](https://github.com/baffoRti/OpenVPN_Traffic_Monitor/issues)
-
-## Acknowledgements
-
-- OpenVPN - for creating an excellent VPN solution
-- SQLite - for reliable data storage
-- Matplotlib - for data visualization
