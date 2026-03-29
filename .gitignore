@@ -209,3 +209,9 @@ __marimo__/
 config.py
 openvpn_stats.log
 openvpn_stats.db
+.env
+*.backup
+venv/
+.venv/
+.ai-cache/
+charts/

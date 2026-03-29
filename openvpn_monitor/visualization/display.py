@@ -1,14 +1,29 @@
 import sqlite3
-import config # For openvpn_stats_db
-import utils  # For convert_bytes_to_human_readable
+from datetime import datetime, timedelta
+from ..utils import config # For openvpn_stats_db
+from ..utils import utils  # For convert_bytes_to_human_readable
 
 
-def display_db_contents(db_path):
+def get_current_month():
+    """Return current month in YYYY-MM format."""
+    return datetime.now().strftime("%Y-%m")
+
+def get_previous_month():
+    """Return previous month in YYYY-MM format."""
+    current = datetime.now()
+    first_day_of_current_month = current.replace(day=1)
+    last_day_of_previous_month = first_day_of_current_month - timedelta(days=1)
+    return last_day_of_previous_month.strftime("%Y-%m")
+
+def display_db_contents(db_path, month_filter=None):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
     print("\n--- User traffic monthly ---")
-    cursor.execute("SELECT * FROM user_traffic_monthly")
+    if month_filter:
+        cursor.execute("SELECT * FROM user_traffic_monthly WHERE year_month = ?", (month_filter,))
+    else:
+        cursor.execute("SELECT * FROM user_traffic_monthly")
     user_traffic_records = cursor.fetchall()
     if user_traffic_records:
         # Sort records alphabetically by common_name
