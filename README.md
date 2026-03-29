@@ -176,31 +176,6 @@ This will display detailed help for all available commands including:
 - `generate_charts.py` - chart generation with various chart types
 - `OpenVPN_Traffic_Monitor.sh` - automation script for cron
 
-**Example chart types:**
-
-1. **Monthly Traffic Chart** (line chart):
-   - X-axis: Months (Jan 2026, Feb 2026, Mar 2026)
-   - Y-axis: Traffic (GB)
-   - Two lines: Received (blue), Sent (red)
-   - Shows traffic trends over time
-
-2. **Client Comparison** (bar chart):
-   - X-axis: Client names (User001, User002, ...)
-   - Y-axis: Total traffic (GB)
-   - Bars grouped by client with received/sent segments
-
-3. **Top Clients** (horizontal bar chart):
-   - Y-axis: Top 10 clients by total traffic
-   - X-axis: Traffic volume (GB)
-   - Sorted descending
-
-4. **Current Clients** (pie chart):
-   - Each slice represents a currently connected client
-   - Slice size = percentage of total current traffic
-   - Legend with client names and percentages
-
-Charts are saved as PNG files in the specified output directory (default: `charts/`).
-
 ## Technical Details
 
 ### Dependencies
