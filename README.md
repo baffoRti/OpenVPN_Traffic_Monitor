@@ -10,9 +10,6 @@ Monitoring and analysis of OpenVPN client traffic with SQLite storage and visual
 - **Automatic data collection**: Parses OpenVPN logs, extracts client traffic information
 - **Statistics storage**: SQLite database with monthly traffic per client
 - **Visualization**: Traffic charts (monthly, per-client, top-N, current connections)
-- **Log rotation**: Automatic cleanup of old application logs
-- **Data validation**: Log format, numeric values, and date validation
-- **Batch processing**: Optimized database updates (batch size: 10)
 
 ## Quick Start
 
