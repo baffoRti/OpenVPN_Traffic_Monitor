@@ -19,6 +19,7 @@ Monitoring and analysis of OpenVPN client traffic with SQLite storage and visual
 # Clone repository
 git clone https://github.com/baffoRti/OpenVPN_Traffic_Monitor.git
 cd OpenVPN_Traffic_Monitor
+chmod +x deploy/install.sh
 
 # Run installation script
 ./deploy/install.sh
