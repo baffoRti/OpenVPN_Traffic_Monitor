@@ -176,19 +176,6 @@ This will display detailed help for all available commands including:
 - `generate_charts.py` - chart generation with various chart types
 - `OpenVPN_Traffic_Monitor.sh` - automation script for cron
 
-### Example Chart Output
-
-After running `python generate_charts.py`, the following charts are generated:
-
-```
-$ python generate_charts.py --output-dir ./charts
-Generating monthly traffic chart... Saved to charts/monthly_traffic.png
-Generating client traffic chart... Saved to charts/client_traffic.png
-Generating top clients chart... Saved to charts/top_clients.png
-Generating current clients chart... Saved to charts/current_clients.png
-All charts generated successfully in './charts/' directory.
-```
-
 **Example chart types:**
 
 1. **Monthly Traffic Chart** (line chart):
