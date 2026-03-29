@@ -76,7 +76,7 @@ Overall Total Traffic:           6.37 GB
 2.  **Настройте лог статуса OpenVPN:**
     Убедитесь, что ваш сервер OpenVPN настроен на экспорт лога статуса. Для этого проверьте файл `/etc/openvpn/server.conf`. Там должны быть строки:
     ```
-    status /var/log/openvpn/status.log
+    status /var/log/openvpn/status.log 10
     status-version 1
     ```
     Если таких строк нет, то добавьте. Если планируете использовать другой путь, не забудьте указать его в файле `config.py`.
