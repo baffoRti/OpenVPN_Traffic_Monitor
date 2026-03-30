@@ -51,7 +51,7 @@ class TrafficMonitor:
             client_list, current_timestamp = self.parser.parse()
             
             if not client_list:
-                self.logger.error("No client data found in the OpenVPN log file.")
+                self.logger.info("No client data found in the OpenVPN log file.")
                 return False
             
             # Check if log has been updated
