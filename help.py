@@ -34,29 +34,11 @@ OpenVPN Traffic Monitor - Command Reference
      python display_stats.py --current-month    # Current month only
      python display_stats.py --month 2026-02    # Specific month
 
-3. GENERATE CHARTS
-   python generate_charts.py [OPTIONS]
-   
-   Options:
-     --chart TYPE       Chart type: all, monthly, client, top, current
-     --client NAME      Client name for client-specific chart
-     --top-n N          Number of top clients to show (default: 10)
-     --output-dir DIR   Output directory for charts (default: charts)
-     --db PATH          Path to database file (default: from .env)
-     --show             Display charts instead of saving to files
-     --help             Show this help message
-   
-   Examples:
-     python generate_charts.py                    # All charts
-     python generate_charts.py --chart monthly    # Monthly traffic chart
-     python generate_charts.py --chart client --client User001
-     python generate_charts.py --show             # Display charts
-
-4. AUTOMATION (CRON)
+3. AUTOMATION (CRON)
    ./OpenVPN_Traffic_Monitor.sh
    Script for automatic log processing (set up in cron).
 
-5. INSTALLATION
+4. INSTALLATION
    ./deploy/install.sh
    Automatic installation script for new servers.
 
