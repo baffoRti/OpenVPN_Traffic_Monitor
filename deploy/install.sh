@@ -96,7 +96,7 @@ print_status "Charts directory created."
 
 echo ""
 echo "==================================================="
-echo "   Installation completed successfully!"
+echo "   Installation Complete!"
 echo "==================================================="
 echo ""
 echo "Next steps:"
