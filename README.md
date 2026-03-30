@@ -82,42 +82,6 @@ Add line:
 * * * * * /path/to/project/OpenVPN_Traffic_Monitor.sh
 ```
 
-## Project Structure
-
-```
-OpenVPN_Traffic_Monitor/
-├── main.py                     # Main log processing script
-├── requirements.txt            # Python dependencies
-├── .env.example                # Configuration template
-├── openvpn_monitor/            # Main Python package
-│   ├── __init__.py
-│   ├── core/                   # Core application logic
-│   │   ├── __init__.py
-│   │   ├── main_app.py         # Processing logic
-│   │   └── monitor.py          # Monitoring class
-│   ├── database/               # Database layer
-│   │   ├── __init__.py
-│   │   ├── database.py         # Functional database interface
-│   │   ├── database_class.py   # OOP database interface
-│   │   └── models.py           # Data models (dataclasses)
-│   ├── parser/                 # OpenVPN log parsing
-│   │   ├── __init__.py
-│   │   ├── parser.py           # Functional parser
-│   │   └── parser_class.py     # OOP parser
-│   ├── visualization/          # Visualization and display
-│   │   ├── __init__.py
-│   │   └── display.py          # Console statistics output
-│   └── utils/                  # Utilities and configuration
-│       ├── __init__.py
-│       ├── utils.py            # General utilities
-│       └── config.py           # Configuration (from .env)
-├── scripts/                    # Deployment scripts
-│   ├── OpenVPN_Traffic_Monitor.sh
-│   └── setup_venv.sh
-└── deploy/                     # Installation tools
-    └── install.sh              # Automatic installation script
-```
-
 ## Usage Examples
 
 ### View Statistics
