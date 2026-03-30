@@ -79,7 +79,7 @@ crontab -e
 
 Add line:
 ```cron
-* * * * * /path/to/project/scripts/OpenVPN_Traffic_Monitor.sh
+* * * * * /path/to/project/OpenVPN_Traffic_Monitor.sh
 ```
 
 ## Usage Examples
