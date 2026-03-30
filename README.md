@@ -3,13 +3,12 @@
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Monitoring and analysis of OpenVPN client traffic with SQLite storage and visualization.
+Monitoring and analysis of OpenVPN client traffic with SQLite storage.
 
 ## Key Features
 
 - **Automatic data collection**: Parses OpenVPN logs, extracts client traffic information
 - **Statistics storage**: SQLite database with monthly traffic per client
-- **Visualization**: Traffic charts (monthly, per-client, top-N, current connections)
 
 ## Quick Start
 
@@ -69,12 +68,6 @@ python main.py
 
 # View statistics
 python display_stats.py
-
-# Generate all charts
-python generate_charts.py
-
-# View charts (opens in separate windows)
-python generate_charts.py --show
 ```
 
 ### 4. Automation (cron)
@@ -113,9 +106,7 @@ OpenVPN_Traffic_Monitor/
 │   │   └── parser_class.py     # OOP parser
 │   ├── visualization/          # Visualization and display
 │   │   ├── __init__.py
-│   │   ├── charts.py           # Chart generation functions
-│   │   ├── display.py          # Console statistics output
-│   │   └── generate_charts.py  # CLI for chart generation
+│   │   └── display.py          # Console statistics output
 │   └── utils/                  # Utilities and configuration
 │       ├── __init__.py
 │       ├── utils.py            # General utilities
@@ -150,21 +141,6 @@ $ python display_stats.py --previous-month
 $ python display_stats.py --month 2026-02
 ```
 
-### Generate Charts
-```bash
-# All charts
-python generate_charts.py --output-dir ./charts
-
-# Specific charts
-python generate_charts.py --chart monthly
-python generate_charts.py --chart client --client User001
-python generate_charts.py --chart top --top-n 10
-python generate_charts.py --chart current
-
-# View charts
-python generate_charts.py --show
-```
-
 ### Command Reference
 For a complete command reference, run:
 ```bash
@@ -174,7 +150,6 @@ python help.py
 This will display detailed help for all available commands including:
 - `main.py` - log processing
 - `display_stats.py` - statistics viewing with filtering options
-- `generate_charts.py` - chart generation with various chart types
 - `OpenVPN_Traffic_Monitor.sh` - automation script for cron
 
 ## Technical Details
@@ -182,7 +157,6 @@ This will display detailed help for all available commands including:
 ### Dependencies
 - Python 3.8+
 - SQLite3
-- matplotlib (for charts)
 - python-dotenv (for configuration)
 
 ### Database Schema
@@ -197,9 +171,3 @@ Ensure the path to OpenVPN log is correctly specified in `.env`.
 
 ### Problem: "Database access error"
 Check write permissions in the project directory.
-
-### Problem: "Charts not generating"
-Ensure matplotlib is installed:
-```bash
-pip list | grep matplotlib
-```
