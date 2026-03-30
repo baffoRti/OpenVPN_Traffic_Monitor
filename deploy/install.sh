@@ -83,11 +83,10 @@ else
     print_status ".env file already exists. Skipping."
 fi
 
-# Make scripts executable
-print_status "Setting up scripts..."
-chmod +x scripts/*.sh
+# Make OpenVPN_Traffic_Monitor script executable
+print_status "Setting up script..."
 chmod +x OpenVPN_Traffic_Monitor.sh 2>/dev/null || true
-print_status "Scripts made executable."
+print_status "Script made executable."
 
 # Create charts directory
 print_status "Creating charts directory..."
