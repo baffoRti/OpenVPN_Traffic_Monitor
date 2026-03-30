@@ -88,11 +88,6 @@ print_status "Setting up script..."
 chmod +x OpenVPN_Traffic_Monitor.sh 2>/dev/null || true
 print_status "Script made executable."
 
-# Create charts directory
-print_status "Creating charts directory..."
-mkdir -p charts
-print_status "Charts directory created."
-
 echo ""
 echo "==================================================="
 echo "   Installation Complete!"
@@ -104,6 +99,6 @@ echo "2. Test the application: python main.py"
 echo "3. View statistics: python display_stats.py"
 echo "4. Set up cron for automatic updates (see README.md)"
 echo ""
-echo "For detailed instructions, see INSTALL.md or README.md"
+echo "For detailed instructions, see README.md"
 echo ""
 echo "==================================================="
