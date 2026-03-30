@@ -139,18 +139,10 @@ $ python display_stats.py --previous-month
 
 # Show specific month
 $ python display_stats.py --month 2026-02
-```
 
-### Command Reference
-For a complete command reference, run:
-```bash
-python help.py
+# Show help message
+$ python display_stats.py --help
 ```
-
-This will display detailed help for all available commands including:
-- `main.py` - log processing
-- `display_stats.py` - statistics viewing with filtering options
-- `OpenVPN_Traffic_Monitor.sh` - automation script for cron
 
 ## Technical Details
 
