@@ -73,13 +73,13 @@ python display_stats.py
 ### 4. Automation (cron)
 
 ```bash
-# Add to crontab for execution every 5 minutes
+# Add to crontab for execution every minute
 crontab -e
 ```
 
 Add line:
 ```cron
-*/5 * * * * /path/to/project/OpenVPN_Traffic_Monitor.sh
+* * * * * /path/to/project/OpenVPN_Traffic_Monitor.sh
 ```
 
 ## Project Structure
