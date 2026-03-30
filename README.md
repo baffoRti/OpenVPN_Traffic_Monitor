@@ -52,7 +52,7 @@ OPENVPN_STATS_LOGS=openvpn_stats.log
 OPENVPN_STATS_DB=openvpn_stats.db
 
 # Log retention days
-LOG_DAYS_TO_KEEP=30
+LOG_DAYS_TO_KEEP=15
 
 # Log rotation settings
 LOG_ROTATION_FREQUENCY=midnight
