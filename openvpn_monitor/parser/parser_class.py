@@ -128,7 +128,7 @@ class OpenVPNParser:
         routing_table_start = log_content.find('ROUTING TABLE')
         
         if client_list_start == -1 or routing_table_start == -1:
-            self.logger.error("Could not find 'OpenVPN CLIENT LIST' or 'ROUTING TABLE' sections.")
+            self.logger.warning("Could not find 'OpenVPN CLIENT LIST' or 'ROUTING TABLE' sections.")
             return [], updated_timestamp
         
         client_list_section = log_content[client_list_start:routing_table_start].strip()
@@ -142,7 +142,7 @@ class OpenVPNParser:
                 break
         
         if header_index == -1:
-            self.logger.error("Could not find the client list header line.")
+            self.logger.warning("Could not find the client list header line.")
             return [], updated_timestamp
         
         header = client_list_lines[header_index]
